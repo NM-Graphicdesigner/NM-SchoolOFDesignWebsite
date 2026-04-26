@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nidda Mahmood | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+
+    <header class="d-flex justify-content-between align-items-center p-4">
+        <div class="ui-text">NIDDA MAHMOOD</div>
+        <div class="ui-links d-flex">
+            <a href="#work" class="mx-3 nav-link-custom">WORK</a>
+            <a href="#" class="mx-3 nav-link-custom">ABOUT</a>
+            <a href="#" class="mx-3 nav-link-custom">CONTACT</a>
+        </div>
+        <div class="ui-text">@2026</div>
+    </header>
+
+    <section class="hero-wrap d-flex flex-column justify-content-center align-items-center">
+        <h1 class="hero-title">NIDDA MAHMOOD</h1>
+        <p class="hero-sub mt-4 text-center">
+            GRAPHIC DESIGNER BASED IN TORONTO FOCUSING<br>
+            ON MOTION GRAPHICS, ILLUSTRATION & BRANDING
+        </p>
+    </section>
+
+    <main id="work" class="container py-5">
+        <h2 class="section-label mb-5">SELECTED WORK</h2>
+        
+        <div class="row g-5">
+            <div class="col-md-6 mb-5">
+                <div class="work-container reveal">
+                    <div class="img-box mb-3">
+                        <img src="images/avatar%20fan%20art.jpg" class="img-fluid" alt="Avatar">
+                    </div>
+                    <h3 class="project-title">Avatar Fan Art</h3>
+                    <p class="project-category">ILLUSTRATION</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="work-container reveal">
+                    <div class="img-box mb-3">
+                        <img src="images/head%20on%20plate.jpg" class="img-fluid" alt="Idiom">
+                    </div>
+                    <h3 class="project-title">Idiom: Head on a Platter</h3>
+                    <p class="project-category">ILLUSTRATION</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10 mb-5">
+                <div class="work-container reveal mx-auto">
+                    <div class="img-box">
+                        <img src="images/snake%20in%20grass.jpg" class="img-fluid" alt="Snake">
+                    </div>
+                    <div class="text-center mt-4">
+                        <h3 class="project-title">Snake in The Grass (Magazine Spread)</h3>
+                        <p class="project-category">ILLUSTRATION</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center mt-5">
+            <div class="col-md-5">
+                <div class="work-container reveal">
+                    <div class="img-box">
+                        <img src="images/package%20design.png" class="img-fluid" alt="Bridgerton Kit 1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="work-container reveal">
+                    <div class="img-box">
+                        <img src="images/package%20design%202.png" class="img-fluid" alt="Bridgerton Kit 2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-4 reveal">
+                <h3 class="project-title">Bridgerton Themed Matcha Kit</h3>
+                <p class="project-category">PACKAGE DESIGN</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10 mb-5">
+                <div class="work-container reveal mx-auto">
+                    <div class="img-box">
+                        <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover;">
+                            <source src="video/title sequence.mp4" type="video/mp4">
+                        </video>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10 mb-5">
+                <div class="work-container reveal mx-auto">
+                    <div class="img-box">
+                        <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover;">
+                            <source src="video/starboy.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="text-center mt-4">
+                        <h3 class="project-title">Title sequence (Thriller, Crime)</h3>
+                        <p class="project-category">MOTION GRAPHIC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-section d-flex justify-content-center align-items-center py-5">
+            <div class="reveal">
+                <a href="#" class="btn-pill-exact">SEE THEM ALL</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const revealCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+        const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
+<section id="about" class="container py-5 mt-5">
+    <div class="row">
+        <div class="col-lg-8 reveal">
+            <h1 class="about-hero-text">HELLO THERE<br>I’M NIDDA</h1>
+            
+            <p class="about-bio mt-5">
+                I specialize in illustration and motion graphics, creating 
+                visually rich narratives that bring ideas to life through 
+                movement and form. My work combines expressive imagery with 
+                thoughtful pacing and composition—crafting stories that resonate 
+                across digital platforms and animated spaces. I blend clarity, 
+                emotion, and rhythm, designing with intention and translating 
+                concepts into dynamic visual experiences.
+            </p>
+
+            <div class="mt-5 pt-4">
+                <p class="services-label">CREATIVE SERVICES</p>
+                <ul class="services-list p-0">
+                    <li>MOTION GRAPHIC</li>
+                    <li>ILLUSTRATION</li>
+                    <li>PACKAGE DESIGN</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="container-fluid bg-black py-5 mt-5">
+    <div class="row justify-content-center align-items-center" style="min-height: 60vh;">
+        <div class="col-12 text-center reveal">
+            <h2 class="footer-cta">LET'S TALK</h2>
+            
+            <div class="mt-5">
+                <a href="mailto:mahmoodnidda@email.com" class="footer-email">HELLO@NIDDA.DESIGN</a>
+            </div>
+            
+            <div class="d-flex justify-content-between px-4 mt-5 pt-5 footer-ui">
+                <span>TORONTO, ON</span>
+                <span>INSTAGRAM / BEHANCE / LINKEDIN</span>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="reveal container-fluid bg-black py-4 border-top border-dark">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <span class="ui-text" style="font-size: 11px; color: #555;">© 2026 NIDDA MAHMOOD</span>
+            </div>
+            
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <div class="ui-links">
+                    <a href="#work" class="mx-2 nav-link-custom" style="font-size: 11px;">WORK</a>
+                    <a href="#about" class="mx-2 nav-link-custom" style="font-size: 11px;">ABOUT</a>
+                    <a href="#contact" class="mx-2 nav-link-custom" style="font-size: 11px;">CONTACT</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center text-md-end">
+                <a href="#" class="nav-link-custom" style="font-size: 11px; letter-spacing: 0.1em;">BACK TO TOP ↑</a>
+            </div>
+        </div>
+    </div>
+</footer>

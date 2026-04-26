@@ -1,0 +1,210 @@
+/* 1. FONT REGISTRATION */
+@font-face {
+    font-family: 'Badeen Display';
+    /* Matches your new filename exactly */
+    src: url("fonts/BadeenDisplay-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. GLOBAL STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    background-color: #000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* 3. HERO SECTION */
+.hero-wrap {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: 'Badeen Display', serif; 
+    font-size: clamp(80px, 18vw, 190px); 
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* 4. WORK GRID (5pt/7px Stroke) */
+.img-box {
+    border: 7px solid #ffffff; 
+    line-height: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.work-container:hover img {
+    filter: grayscale(0%);
+}
+
+.project-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.project-category {
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+/* --- EDITORIAL REVEAL ANIMATION --- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-box {
+    border: 5px solid #ffffff; 
+    box-sizing: border-box;
+    overflow: hidden; /* This is the "window" */
+    background-color: #1a1a1a;
+}
+
+.img-box img {
+    width: 100%;
+    height: 110%; /* Slightly taller to allow for the slide */
+    object-fit: cover;
+    transform: translateY(10%); /* Start lower */
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: grayscale(100%) brightness(0.5);
+}
+
+/* When the container is active, the image slides up and brightens */
+.reveal.active .img-box img {
+    transform: translateY(0);
+    filter: grayscale(0%) brightness(1);
+}
+
+/* This sets the "Starting Position" (Invisible) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* This is what the Script triggers (Visible) */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Ensure the video fills the 5pt white border box */
+.img-box video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* --- CTA EXACT MATCH --- */
+
+.cta-container {
+    padding: 100px 0; /* Vertical breathing room */
+    background-color: #000;
+}
+
+.btn-exact {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #000000;
+    
+    /* Shape: Matches the pill look exactly */
+    padding: 18px 80px; 
+    border-radius: 200px; 
+    
+    /* Typography: Using Space Mono to match your screenshot */
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    /* Animation & Interactive State */
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #FFFFFF;
+}
+
+.btn-exact:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    letter-spacing: 0.15em; /* Subtle "expansion" on hover */
+}
+/* SOCIAL ICON STYLING */
+.social-icon {
+    font-size: 2rem; /* Larger on desktop */
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    color: #ff00ff; /* Subtle glow color to match your glitch effect */
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.5rem; /* Smaller icons for mobile */
+    }
+    
+    .footer-cta {
+        font-size: 50px; /* Adjusting the massive text for small screens */
+    }
+
+    .footer-ui {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Ensure the magnetic effect from previous code still applies */
+.magnetic {
+    display: inline-block;
+    will-change: transform;
+}
+/* This targets all links in your navigation and footer */
+.nav-link-custom, 
+.footer-email, 
+.social-icon {
+    text-decoration: none !important; /* Removes the underline */
+    color: inherit; /* Makes the link take the color of the text around it (white) */
+}
+
+/* If you want a specific hover effect instead of the blue underline */
+.nav-link-custom:hover {
+    color: #ff00ff; /* Or any color you like */
+    text-decoration: none;
+}
